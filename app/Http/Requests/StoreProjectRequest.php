@@ -26,8 +26,7 @@ class StoreProjectRequest extends FormRequest
     {
         return [
             'title' => ['required', 'string', 'max:50', Rule::unique('projects')],
-            'slug' => 'required|string|unique:projects,slug',
-            'description' => 'required|string|max:255',
+            'description' => 'nullable|string|max:255',
         ];
     }
 }
