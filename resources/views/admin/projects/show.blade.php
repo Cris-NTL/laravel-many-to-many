@@ -12,7 +12,7 @@
 
     @if ($project->technologies->isNotEmpty())
         @foreach ($project->technologies as $technology)
-            <h6 class="text-end text-muted">{{ $technology->name }}</h6>
+            <h6 class="text-end text-muted">{{ $technology?->name }}</h6>
         @endforeach
     @else
         <h6 class="text-end text-muted">Technology Unknown</h6>
