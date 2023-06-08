@@ -2,7 +2,8 @@
 
 @section('content')
     <h2>Add a new project</h2>
-
+    <a href="{{ url()->previous() }}">Back</a>
+    
     @include('partials.errors')
 
     <form action="{{ route('admin.projects.store') }}" method="POST">

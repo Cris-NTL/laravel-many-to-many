@@ -2,6 +2,7 @@
 
 @section('content')
     <h2>Edit this project {{ $project->title }}</h2>
+    <a href="{{ url()->previous() }}">Back</a>
 
     @include('partials.errors')
 
