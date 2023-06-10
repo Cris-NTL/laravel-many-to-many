@@ -12,7 +12,8 @@
 
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
-            <input type="text" class="form-control" id="title" name="title" value="{{ old('title', $project->title) }}">
+            <input type="text" class="form-control" id="title" name="title"
+                value="{{ old('title', $project->title) }}">
         </div>
 
         <div class="mb-3">
@@ -30,7 +31,8 @@
             @foreach ($technologies as $technology)
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="{{ $technology->id }}"
-                        id="technology{{ $technology->id }}" name="technologies[]">
+                        id="technology{{ $technology->id }}" name="technologies[]"
+                        @if ($project->technologies->contains($technology->id)) checked @endif>
                     <label class="form-check-label" for="technology{{ $technology->id }}">
                         {{ $technology->name }}
                     </label>

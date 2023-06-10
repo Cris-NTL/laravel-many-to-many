@@ -36,7 +36,7 @@
                             method="POST">
                             @method('DELETE')
                             @csrf
-                            <button type="submit" class="btn btn-danger ms_btn_cancel" data-title="{{ $project->title }}">
+                            <button type="submit" class="btn btn-danger ms_btn_cancel" data-title="{{ $project->title }}" onclick="return confirm('Do you want to delete this element?')">
                                 <i class="fa-solid fa-trash-can"></i>
                             </button>
                         </form>
